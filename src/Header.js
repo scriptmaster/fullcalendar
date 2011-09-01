@@ -1,4 +1,3 @@
-
 function Header(calendar, options) {
 	var t = this;
 	
@@ -66,6 +65,7 @@ function Header(calendar, options) {
 								button.removeClass(tm + '-state-hover'); // forget why
 								calendar.changeView(buttonName);
 							};
+							calendar.changeView(buttonName);
 						}
 						if (buttonClick) {
 							var icon = options.theme ? smartProperty(options.buttonIcons, buttonName) : null; // why are we using smartProperty here?
