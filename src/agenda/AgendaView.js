@@ -1,4 +1,3 @@
-
 setDefaults({
 	allDaySlot: true,
 	allDayText: 'all-day',
@@ -369,7 +368,9 @@ function AgendaView(element, calendar, viewName) {
 				}),
 			axisWidth
 		);
-		
+
+		axisWidth *= (1 + (dayHead.find('.fc-last .fc-extra-axis').length||0));
+
 		var slotTableWidth = slotScroller[0].clientWidth; // needs to be done after axisWidth (for IE7)
 		//slotTable.width(slotTableWidth);
 		
